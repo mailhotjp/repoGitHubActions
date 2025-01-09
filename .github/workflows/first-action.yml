@@ -17,7 +17,8 @@ jobs:
       # Runs a single command using the runners shell
       - name: Get Code
         uses: actions/checkout@v3
-  deploy-job:
+  echo-job:
+    needs:  getcode-job
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
     # Steps represent a sequence of tasks that will be executed as part of the job
